@@ -1,0 +1,38 @@
+package ejemploarrayaleatorio;
+
+import java.util.Random;
+
+import utilidades.Leer;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		int tam;
+		int edades[];
+		int hasta, desde;
+		
+		Random rnd = new Random(System.nanoTime());
+		
+		System.out.println("Bienvenido a mi programa\n");
+		
+		System.out.println("Diga tamaño");
+		tam = Leer.datoInt();
+		
+		edades = new int [tam];
+		
+		//Rellenar con aleatorios
+		System.out.println("Diga el menor generado");
+		desde = Leer.datoInt();
+		System.out.println("Diga el mayor generado");
+		hasta = Leer.datoInt();
+		
+		for (int i = 0; i < edades.length; i++) {
+			edades[i] = rnd.nextInt(hasta-desde+1)+desde; //cuidado con los parentesis, tiene que ser con uno namá
+			
+		}
+		
+		
+	}
+
+}

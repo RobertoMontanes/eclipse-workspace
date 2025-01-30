@@ -1,0 +1,146 @@
+package calculadora;
+
+import java.util.Random;
+import utilidades.Leer;
+
+public class Calculadora {
+
+    public static void main(String[] args) {
+        // Declaración de variables
+        int opcion;
+        int opcionTipoPropiedad;
+        int presupuestoMax;
+        int presupuestoMin;
+        int respuesta;
+
+        Random num = new Random(System.nanoTime());
+
+        String[][] propiedadesCompra = {
+            {"Casa Moderna", "Piso de Lujo", "Dúplex Familiar"},
+            {"Apartamento en el Centro", "Casa de Campo", "Estudio Pequeño"},
+            {"Terreno en la Playa", "Terreno en la Montaña", "Terreno Urbano"},
+            {"Edificio de Oficinas", "Residencial de Apartamentos", "Edificio Comercial"}
+        };
+
+        String[][] propiedadesAlquiler = {
+            {"Apartamento Amueblado", "Estudio en el Centro", "Casa de Verano"},
+            {"Piso Compartido", "Departamento en la Playa", "Casa de Campo"},
+            {"Loft Industrial", "Estudio Minimalista", "Casa en el Bosque"}
+        };
+
+        int[] precios;
+        int numPropiedades;
+
+        System.out.println("Bienvenido a nuestro programa donde podrá comprar, alquilar o compartir viviendas\n");
+
+        do {
+            System.out.println("\nElija una opción:");
+            System.out.println("0. Salir del programa");
+            System.out.println("1. Comprar una propiedad");
+            System.out.println("2. Alquilar una propiedad");
+            System.out.println("3. Compartir una propiedad (pendiente de implementar)");
+            opcion = Leer.datoInt();
+
+            switch (opcion) {
+                case 0:
+                    System.out.println("Saliendo...");
+                    break;
+                case 1:
+                    System.out.println("¿Qué tipo de propiedad desea comprar? (seleccione un número de opción):");
+                    System.out.println("1. Obra nueva");
+                    System.out.println("2. Vivienda");
+                    System.out.println("3. Terreno sin construir");
+                    System.out.println("4. Edificio");
+                    opcionTipoPropiedad = Leer.datoInt();
+
+                    if (opcionTipoPropiedad >= 1 && opcionTipoPropiedad <= 4) {
+                        System.out.println("¿Cuál es el presupuesto mínimo que se quiere gastar?");
+                        presupuestoMin = Leer.datoInt();
+                        System.out.println("¿Cuál es el presupuesto máximo que se quiere gastar?");
+                        presupuestoMax = Leer.datoInt();
+
+                        if (presupuestoMin >= 0 && presupuestoMax > presupuestoMin) {
+                            numPropiedades = propiedadesCompra[opcionTipoPropiedad - 1].length;
+                            precios = new int[numPropiedades];
+
+                            System.out.println("Propiedades disponibles:\n");
+                            for (int i = 0; i < numPropiedades; i++) {
+                                precios[i] = num.nextInt(presupuestoMax - presupuestoMin + 1) + presupuestoMin;
+                                System.out.println("Propiedad: " + propiedadesCompra[opcionTipoPropiedad - 1][i] + " - Precio: " + precios[i] + "€");
+
+                                // Propuesta para aceptar la reserva
+                                System.out.println("¿Desea reservar esta propiedad? (1. Sí / 2. No)");
+                                respuesta = Leer.datoInt();
+
+                                if (respuesta == 1) {
+                                    System.out.println("¡Reserva aceptada para la propiedad: " + propiedadesCompra[opcionTipoPropiedad - 1][i] + " por " + precios[i] + "€!");
+                                    System.out.println("Gracias por su reserva.\n");
+                                    // Regresar al menú principal
+                                    break; // Salir del bucle y regresar al menú
+                                } else if (respuesta == 2) {
+                                    System.out.println("Continuando con la búsqueda...\n");
+                                } else {
+                                    System.out.println("Opción no válida. Continuando con la búsqueda...\n");
+                                }
+                            }
+                        } else {
+                            System.out.println("Por favor, ingrese un rango de presupuesto válido.");
+                        }
+                    } else {
+                        System.out.println("Opción de tipo de propiedad no válida.");
+                    }
+                    break;
+                case 2:
+                    System.out.println("¿Qué tipo de propiedad desea alquilar? (seleccione un número de opción):");
+                    System.out.println("1. Apartamento");
+                    System.out.println("2. Casa");
+                    System.out.println("3. Loft");
+                    opcionTipoPropiedad = Leer.datoInt();
+
+                    if (opcionTipoPropiedad >= 1 && opcionTipoPropiedad <= 3) {
+                        System.out.println("¿Cuál es el presupuesto mínimo que se quiere gastar?");
+                        presupuestoMin = Leer.datoInt();
+                        System.out.println("¿Cuál es el presupuesto máximo que se quiere gastar?");
+                        presupuestoMax = Leer.datoInt();
+
+                        if (presupuestoMin >= 0 && presupuestoMax > presupuestoMin) {
+                            numPropiedades = propiedadesAlquiler[opcionTipoPropiedad - 1].length;
+                            precios = new int[numPropiedades];
+
+                            System.out.println("Propiedades disponibles para alquilar:\n");
+                            for (int i = 0; i < numPropiedades; i++) {
+                                precios[i] = num.nextInt(presupuestoMax - presupuestoMin + 1) + presupuestoMin;
+                                System.out.println("Propiedad: " + propiedadesAlquiler[opcionTipoPropiedad - 1][i] + " - Precio: " + precios[i] + "€/mes");
+
+                                // Propuesta para aceptar la reserva
+                                System.out.println("¿Desea reservar esta propiedad? (1. Sí / 2. No)");
+                                respuesta = Leer.datoInt();
+
+                                if (respuesta == 1) {
+                                    System.out.println("¡Reserva aceptada para la propiedad: " + propiedadesAlquiler[opcionTipoPropiedad - 1][i] + " por " + precios[i] + "€/mes!");
+                                    System.out.println("Gracias por su reserva.\n");
+                                    // Regresar al menú principal
+                                    break; // Salir del bucle y regresar al menú
+                                } else if (respuesta == 2) {
+                                    System.out.println("Continuando con la búsqueda...\n");
+                                } else {
+                                    System.out.println("Opción no válida. Continuando con la búsqueda...\n");
+                                }
+                            }
+                        } else {
+                            System.out.println("Por favor, ingrese un rango de presupuesto válido.");
+                        }
+                    } else {
+                        System.out.println("Opción de tipo de propiedad no válida.");
+                    }
+                    break;
+                case 3:
+                    System.out.println("Compartir una propiedad (pendiente de implementar)");
+                    break;
+                default:
+                    System.out.println("Opción no válida. Intente de nuevo.\n");
+                    break;
+            }
+        } while (opcion != 0);
+    }
+}

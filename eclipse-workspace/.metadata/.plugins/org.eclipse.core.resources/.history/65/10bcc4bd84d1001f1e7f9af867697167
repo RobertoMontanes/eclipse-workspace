@@ -1,0 +1,27 @@
+package ejemplo3poliformismo;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		//Figura f = new Figura(); no podemos instanciar objetos de una clase abstracta
+		
+		Cuadrado c = new Cuadrado("Cuadrado 1", "Negro", 2);
+		
+		Figura f2 = new Cuadrado("Cuadrado 2", "Blanco", 3);
+		
+	//	Figura f3 = new Cuadrado();
+		
+		f2.calcularArea();
+		
+		//c.calcularArea();
+		
+		f2.imprimirTexto();
+		
+		c.mostrarLados();
+		
+		
+		
+	}
+
+}

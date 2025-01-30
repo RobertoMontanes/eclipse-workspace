@@ -1,0 +1,32 @@
+package ejercicio06;
+
+public class Generadora {
+
+	/*
+	 * Crear una clase llamada Generadora sin atributos, pero con varios métodos que
+	 * generen aleatoriamente distintos números o resultados según las
+	 * características del sorteo o para qué se vaya a usar, por ejemplo, generar 1,
+	 * x, 2 para una quiniela, generar par o impar para jugar a pares o nones,
+	 * generar 1, 2 o 3 para jugar a los "chinos", del 1 al 49 para el sorteo de
+	 * primitiva... Crear una clase principal donde se prueben todos los métodos
+	 * pidiendo los datos necesarios para cada generación
+	 */
+	
+	
+	    public String generarQuiniela() {
+	        int numAleatorio = (int) (Math.random() * 3);
+
+	        switch (numAleatorio) {
+	            case 0: return "Empate";  // Si es 0, empate
+	            case 1: return "Gana equipo 1";  // Si es 1, gana el primer equipo
+	            case 2: return "Gana equipo 2";  // Si es 2, gana el segundo equipo
+	            default: return "Error";  // Esto no debería ocurrir
+	        }
+	    }
+	
+
+
+	
+
+	
+}

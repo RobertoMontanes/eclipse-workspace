@@ -1,0 +1,5 @@
+package ejemplo3poliformismo;
+
+public class Cuadrado extends Figura{
+
+}

@@ -1,0 +1,30 @@
+package ejemplo02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		
+		
+		Alumno a1 = new Alumno("Roberto", "78252188N", 8);		
+		Alumno a2 = new Alumno("Mara", "7654328C", 5);		
+		Alumno a3 = new Alumno("HonChang", "684154454H", 10);				
+		Alumno a4 = new Alumno("Luis", "312565465L", 3);		
+		Alumno a5 = new Alumno("Miguel", "654987654F", 1);		
+		Alumno a6 = new Alumno("Mei", "987543124M", 0);		
+		
+		List<Alumno> listaNombres = new ArrayList<Alumno>();
+				
+		listaNombres.add(a1);
+		listaNombres.add(a2);
+		listaNombres.add(a3);
+		
+
+		
+		
+	}
+
+}

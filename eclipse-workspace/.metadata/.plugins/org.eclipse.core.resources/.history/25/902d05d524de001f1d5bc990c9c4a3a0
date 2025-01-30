@@ -1,0 +1,65 @@
+package ejemplo02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import utilidades.Leer;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		
+		int opcion = 0;
+		Alumno a1 = new Alumno("Roberto", "78252188N", 8);		
+		Alumno a2 = new Alumno("Mara", "7654328C", 5);		
+		Alumno a3 = new Alumno("HonChang", "684154454H", 10);				
+		Alumno a4 = new Alumno("Luis", "312565465L", 3);		
+		Alumno a5 = new Alumno("Miguel", "654987654F", 1);		
+		Alumno a6 = new Alumno("Mei", "987543124M", 0);		
+		List<Alumno> listaNombres = new ArrayList<Alumno>();
+		Secretaria s = new Secretaria(listaNombres);
+				
+		listaNombres.add(a1);
+		listaNombres.add(a2);
+		listaNombres.add(a3);
+		listaNombres.add(a4);
+		listaNombres.add(a5);
+		listaNombres.add(a6);
+		
+		
+		System.out.println("Bienvenido a mi programa\n");
+
+		do {
+			System.out.println("Elige una opcion");
+			System.out.println("Pulsa 0. para salir");
+			System.out.println("Pulsa 1. para agregar alumno");
+			System.out.println("Pulsa 2. para mostrar alumnos");
+			System.out.println("Pulsa 0. para salir");
+			System.out.println("Pulsa 0. para salir");
+			opcion = Leer.datoInt();
+			
+			
+			switch (opcion) {
+			case 0:
+				System.out.println("Saliendo del programa...");
+				break;
+			case 1:
+				s.agregarAlumno(a1);
+				break;
+			case 2:
+				s.imprimirLista();
+				break;
+			case 3:
+
+			case 4:
+
+			default:
+				System.out.println("Número inválido. Pulse otro");
+				break;
+			}
+		} while (opcion != 0);
+		
+	}
+
+}

@@ -1,0 +1,15 @@
+package ejemplo1;
+
+public class Alumno {
+
+	// Atributos: 
+	
+	
+	private int edad = 20; 
+	private String nombre;
+	private double notaMedia;
+	private double [] notas; 
+	
+	
+	
+}

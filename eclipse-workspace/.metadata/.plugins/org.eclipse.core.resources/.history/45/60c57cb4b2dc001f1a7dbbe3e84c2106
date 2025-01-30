@@ -1,0 +1,34 @@
+package ejercicio01;
+
+public class Nota {
+
+	private String asignatura;
+	private String contenido;
+
+	public Nota(String titulo, String contenido) {
+		this.asignatura = titulo;
+		this.contenido = contenido;
+	}
+
+	public String getTitulo() {
+		return asignatura;
+	}
+
+	public String getContenido() {
+		return contenido;
+	}
+
+	public void setTitulo(String titulo) {
+		this.asignatura = titulo;
+	}
+
+	public void setContenido(String contenido) {
+		this.contenido = contenido;
+	}
+
+	@Override
+	public String toString() {
+		return "Asignatura: " + asignatura + "\nContenido: " + contenido;
+	}
+
+}

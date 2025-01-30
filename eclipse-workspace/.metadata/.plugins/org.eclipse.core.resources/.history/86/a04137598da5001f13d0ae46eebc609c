@@ -1,0 +1,32 @@
+package ejercicio08;
+
+public class CuentaCorriente {
+
+	private double saldo;
+	private String nombreTitutlar;
+
+	public CuentaCorriente(double saldo, String nombreTitutlar) {
+		this.saldo = saldo;
+		this.nombreTitutlar = nombreTitutlar;
+	}
+
+
+	public double getSaldo() {
+		return saldo;
+	}
+
+	public void setSaldo(double saldo) {
+		this.saldo = saldo;
+	}
+
+	public String getNombreTitutlar() {
+		return nombreTitutlar;
+	}
+
+	public void setNombreTitutlar(String nombreTitutlar) {
+		this.nombreTitutlar = nombreTitutlar;
+	}
+	
+	
+	
+}

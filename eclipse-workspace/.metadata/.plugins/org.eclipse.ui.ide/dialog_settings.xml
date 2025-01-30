@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="org.eclipse.jdt.ui.wizards.JavaProjectWizard"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+		</list>
+		<section name="NewWizard.dialogBounds">
+		</section>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_NESTED_PROJECTS" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\CuatroEnRayaJaimeAlemany"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\EjercicioT4RobertoMontanesRamos"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\EjemplosTema4"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\CuatroEnRayaJaimePrueba"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\CuatroEnRayaJaimePrueba - copia"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\Metodos"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\ExamenT2RobertoMontanesRamos"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\proyectoT2AlejandroRodriguez"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\EjemplosUD2"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\robe"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\EjerciciosTema2RobertoMontanes"/>
+			<item value="C:\Users\montanes.rarob24_tri\eclipse-workspace\EjerciciosUD3RobertoMontanes"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+		<section name="ExternalProjectImportWizard.dialogBounds">
+			<item key="DIALOG_X_ORIGIN" value="706"/>
+			<item key="DIALOG_Y_ORIGIN" value="191"/>
+			<item key="DIALOG_WIDTH" value="525"/>
+			<item key="DIALOG_HEIGHT" value="710"/>
+			<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+		</section>
+	</section>
+</section>

@@ -1,0 +1,72 @@
+package ejercicio08;
+
+import utilidades.Leer;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		CuentaCorriente c = new CuentaCorriente(0, "Roberto");
+		int opcion;
+		double ingreso;
+		double retiro;
+		String titular;
+		System.out.println("Bienvenido a mi programa");
+
+		System.out.println("Diga quien es el titular de la cuenta");
+		titular = Leer.dato();
+		c.setNombreTitutlar(titular);
+		System.out.println("El titular de la cuenta es "+c.getNombreTitutlar()+" y tiene "+c.getSaldo()+"€ en la cuenta del banco");
+		do {
+			
+			System.out.println("\nElige una opción\n");
+			System.out.println("Pulsa 0. para salir del programa");
+			System.out.println("Pulsa 1. para ingresar dinero");
+			System.out.println("Pulsa 2. para retirar dinero");
+			System.out.println("Pulsa 3. para calcular traspaso a Dólar americano");
+			System.out.println("Pulsa 4. para consultar saldo");
+
+			opcion = Leer.datoInt();
+
+			switch (opcion) {
+				case 0:
+					System.out.println("Saliendo...");
+					break;
+				case 1:
+					System.out.println("\nTiene "+c.getSaldo()+"€ en la cuenta del banco");
+					System.out.println("Cuánto dinero quiere ingresar?");
+					ingreso = Leer.datoDouble();
+					c.ingresarDinero(ingreso);
+					System.out.println("Su saldo actual es de "+c.getSaldo()+"€");
+					
+					break;
+				case 2:
+				    System.out.println("\nTiene " + c.getSaldo() + "€ en la cuenta del banco");
+				    System.out.println("Cuánto dinero quiere retirar?");
+				    retiro = Leer.datoDouble();
+				    if (retiro <= c.getSaldo()) {
+				        c.retirarDinero(retiro);
+				        System.out.println("Su saldo actual es de " + c.getSaldo() + "€");
+				    } else {
+				        System.out.println("No tiene suficiente saldo para retirar esa cantidad.");
+				    }
+
+					break;
+				case 3:
+					System.out.println("");
+					
+					
+					break;
+				case 4:
+					System.out.println("\nTiene "+c.getSaldo()+"€ en la cuenta del banco");
+
+					break;
+				default:
+					System.out.println("Opción no válida. Intenta nuevamente.");
+					break;
+				}
+		} while (opcion != 0);
+
+		System.out.println("Muchas gracias por usar mi programa");
+	}
+}

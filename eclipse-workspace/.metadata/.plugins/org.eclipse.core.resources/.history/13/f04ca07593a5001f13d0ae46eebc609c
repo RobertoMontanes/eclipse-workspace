@@ -1,0 +1,60 @@
+package ejercicio08;
+
+import utilidades.Leer;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		CuentaCorriente c = new CuentaCorriente(2000, "Roberto");
+		int opcion;
+		double ingreso;
+		double retiro;
+
+		System.out.println("Bienvenido a mi programa");
+
+		do {
+			System.out.println("\nElige una opción\n");
+			System.out.println("Pulsa 0. para salir del programa");
+			System.out.println("Pulsa 1. para ingresar dinero");
+			System.out.println("Pulsa 2. para retirar dinero");
+			System.out.println("Pulsa 3. para calcular traspaso a Dólar americano");
+			System.out.println("Pulsa 4. para consultar saldo");
+
+			opcion = Leer.datoInt();
+
+			switch (opcion) {
+				case 0:
+					System.out.println("Saliendo...");
+					break;
+				case 1:
+						System.out.println("\nTiene "+c.getSaldo()+"€ en la cuenta del banco");
+						System.out.println("Cuánto dinero quiere ingresar?");
+						ingreso = Leer.datoDouble();
+						c.ingresarDinero(ingreso);
+						System.out.println("Su saldo actual es de "+c.getSaldo()+"€");
+					
+					break;
+				case 2:
+						System.out.println("\nTiene "+c.getSaldo()+"€ en la cuenta del banco");
+						System.out.println("Cuánto dinero quiere retirar?");
+						retiro = Leer.datoDouble();
+						c.retirarDinero(retiro);
+						System.out.println("Su saldo actual es de "+c.getSaldo()+"€");
+		
+					break;
+				case 3:
+	
+					break;
+				case 4:
+	
+					break;
+				default:
+					System.out.println("Opción no válida. Intenta nuevamente.");
+					break;
+				}
+		} while (opcion != 0);
+
+		System.out.println("Muchas gracias por usar mi programa");
+	}
+}

@@ -1,0 +1,12 @@
+package ejemplo01;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		Producto p1 = new Producto("LATA FANTA", 10, true);
+		Producto p3 = new Producto("patatas", 5, false);
+
+	}
+
+}

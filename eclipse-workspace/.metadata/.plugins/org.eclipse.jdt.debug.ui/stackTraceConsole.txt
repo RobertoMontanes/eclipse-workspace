@@ -1,0 +1,139 @@
+case 3:
+
+                	opcion=0;
+
+                    System.out.println("¿Cuántas personas compartirán la vivienda?");
+
+                    numeropersonas = Leer.datoInt();
+
+                    System.out.println("¿Cuál es el presupuesto mínimo que se quiere gastar?");
+
+                    presupuestoMin = Leer.datoInt();
+
+                    System.out.println("¿Cuál es el presupuesto máximo que se quiere gastar?");
+
+                    presupuestoMax = Leer.datoInt();
+
+
+
+                    if (presupuestoMin < 0 || presupuestoMax <= presupuestoMin) {
+
+                        System.out.println("Por favor, ingrese un rango de presupuesto válido.");
+
+                        continue;
+
+                    } else {
+
+                        for (int i = 0; i < arrayprecio.length; i++) {
+
+                            arrayprecio[i] = num.nextInt(presupuestoMax - presupuestoMin + 1) + presupuestoMin;
+
+                            porcentajeCompartir[i] = (arrayprecio[i] * (100 / numeropersonas)) / 100;
+
+                        }
+
+                    }
+
+
+
+                    System.out.println("Propiedades compartidas:\n");
+
+                    System.out.println(propiedadesCompra[num.nextInt(3 - 1 + 1) + 1][num.nextInt(2 - 1 + 1) + 1]);
+
+                    System.out.printf("1) Precio normal: %d€ - Tu %.0f%%: %.0f€\n", arrayprecio[0], (100 / numeropersonas), porcentajeCompartir[0]);
+
+                    System.out.println(propiedadesCompra[num.nextInt(3 - 1 + 1) + 1][num.nextInt(2 - 1 + 1) + 1]);
+
+                    System.out.printf("2) Precio normal: %d€ - Tu %.0f%%: %.0f€\n", arrayprecio[1], (100 / numeropersonas), porcentajeCompartir[1]);
+
+                    System.out.println(propiedadesCompra[num.nextInt(3 - 1 + 1) + 1][num.nextInt(2 - 1 + 1) + 1]);
+
+                    System.out.printf("3) Precio normal: %d€ - Tu %.0f%%: %.0f€\n", arrayprecio[2], (100 / numeropersonas), porcentajeCompartir[2]);
+
+                    System.out.println(propiedadesCompra[num.nextInt(3 - 1 + 1) + 1][num.nextInt(2 - 1 + 1) + 1]);
+
+                    System.out.printf("4) Precio normal: %d€ - Tu %.0f%%: %.0f€\n", arrayprecio[3], (100 / numeropersonas), porcentajeCompartir[3]);
+
+                    System.out.println(propiedadesCompra[num.nextInt(3 - 1 + 1) + 1][num.nextInt(2 - 1 + 1) + 1]);
+
+                    System.out.printf("5) Precio normal: %d€ - Tu %.0f%%: %.0f€\n", arrayprecio[4], (100 / numeropersonas), porcentajeCompartir[4]);
+
+                    
+
+                    System.out.println("elija una opcion (0 para cancelar)");
+
+                    opcion=Leer.datoInt();
+
+                    switch (opcion) {
+
+					case 1: {
+
+						System.out.println("¡Reserva aceptada!");
+
+						System.out.println("Gracias por su tiempo");
+
+						break;
+
+					}
+
+					case 2: {
+
+						System.out.println("¡Reserva aceptada!");
+
+						System.out.println("Gracias por su tiempo");
+
+						break;
+
+					}
+
+					case 3: {
+
+						System.out.println("¡Reserva aceptada!");
+
+						System.out.println("Gracias por su tiempo");
+
+						break;
+
+					}
+
+					case 4: {
+
+						System.out.println("¡Reserva aceptada!");
+
+						System.out.println("Gracias por su tiempo");
+
+						break;
+
+					}
+
+					case 5: {
+
+						System.out.println("¡Reserva aceptada!");
+
+						System.out.println("Gracias por su tiempo");
+
+						break;
+
+					}
+
+					case 0: {
+
+						System.out.println("cancelando....");
+
+						System.out.println("reserva cancelada");
+
+						break;
+
+					}
+
+					default:
+
+						throw new IllegalArgumentException("Unexpected value: " + opcion);
+
+					}
+
+                    System.out.println("\n(presione intro para continuar)");
+
+                    continuar = Leer.dato();
+
+                    break;

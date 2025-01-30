@@ -1,0 +1,22 @@
+package ejemplo1;
+
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		//objeto que utilizamos para sentarnos para descansar 
+		//Parametros: datos que se le dan al metodo para que haga lo que tiene que hacer
+		//Nombre de los metodos tienen que ser verbos en infinitivo
+		//1minuscula2mayucula
+		//verboInfinitivo;
+
+		
+		Alumno a1 = new Alumno();
+		
+		
+		System.out.println(a1.getEdad());
+		
+	}
+
+}
