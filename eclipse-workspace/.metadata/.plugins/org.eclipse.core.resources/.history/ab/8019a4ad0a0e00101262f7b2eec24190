@@ -1,0 +1,4 @@
+package java14;
+
+//Usando Record en vez de clase tradicional
+public record PersonaConRecords(String nombreCompleto, int anios) { }

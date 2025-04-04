@@ -1,0 +1,37 @@
+package fecha;
+
+import java.time.DayOfWeek;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.temporal.TemporalAdjusters;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		LocalDate fechaActual = LocalDate.now();
+		LocalDate fechaEspecifica = LocalDate.of(2024, 3, 23);
+		LocalDate fechaDesdeCadena = LocalDate.parse("2024-03-30");
+		
+		
+		System.out.println(fechaActual);
+		System.out.println(fechaEspecifica);
+		System.out.println(fechaDesdeCadena);
+		
+		System.out.println("\n");
+		
+		LocalDate sigDomingo = fechaActual.with(TemporalAdjusters.next(DayOfWeek.SUNDAY));
+		
+		System.out.println(sigDomingo);
+		
+		System.out.println("\n");
+		
+		
+		LocalTime now = LocalTime.now();
+		LocalTime fixedTime = LocalTime.of(14,30);
+		
+		System.out.println("Hora actual: " + now);
+		System.out.println("Hora específica" + fixedTime);
+	}
+
+}

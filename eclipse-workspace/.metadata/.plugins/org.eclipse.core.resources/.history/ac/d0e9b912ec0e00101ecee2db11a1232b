@@ -1,0 +1,8 @@
+package lamda;
+	@FunctionalInterface
+	public interface IHola {
+		
+		public void mostrarMensaje(String s);
+		
+		
+}

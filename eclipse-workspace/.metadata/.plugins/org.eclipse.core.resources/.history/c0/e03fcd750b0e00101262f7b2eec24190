@@ -1,0 +1,27 @@
+package java15;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		//Antes de Java 15
+		Object obj = "Hola, soy un String";
+
+		// Comprobamos si obj es una instancia de String
+		if (obj instanceof String) {
+			String s = (String) obj; // Hacemos el cast manualmente
+			System.out.println("Longitud del String: " + s.length());
+		}
+
+		//Java 15 y posteriores con uso de Patrones de coincidencia en instanceof
+
+		Object cadena = "Hola, soy un String con más longitud ";
+
+        // Comprobamos y declaramos la variable en la misma línea
+        if (cadena instanceof String s) {  // Automáticamente convierte obj en String
+            System.out.println("Longitud del String (37 carácteres): " + s.length());
+        }
+
+	}
+
+}

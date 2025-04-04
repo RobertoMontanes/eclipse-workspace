@@ -1,0 +1,7 @@
+package lamda;
+
+@FunctionalInterface
+public interface IHola {
+	
+	int calcular(int a, int b);
+}

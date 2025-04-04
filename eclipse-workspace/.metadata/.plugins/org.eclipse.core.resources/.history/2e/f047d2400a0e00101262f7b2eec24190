@@ -1,0 +1,12 @@
+package java14;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		//Antes de records Java 14
+		
+		
+	}
+
+}

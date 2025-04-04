@@ -1,0 +1,12 @@
+package lamda;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		IHola IMensaje = "Mensaje de error";
+		System.out.println(IMensaje);
+		
+	}
+
+}

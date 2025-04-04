@@ -1,0 +1,19 @@
+package lamda;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		IHola suma = (int parametro1, int parametro2) -> parametro1 + parametro2;
+
+		System.out.println(suma.calcular(5, 6));
+
+		IHola multi = (int multi1, int multi2) -> multi1 * multi2;
+
+		System.out.println(multi.calcular(2, 5));
+
+		
+		
+	}
+
+}

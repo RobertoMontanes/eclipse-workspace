@@ -1,0 +1,23 @@
+package java16;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		
+		//Antes de Java 16 
+		Persona p = new Persona("Roberto", 5);  // ❌ No hay validación dentro del Record
+        if (p.edad() < 0) {
+            throw new IllegalArgumentException("La edad no puede ser negativa");
+        }
+
+        //Java 16 con validación de Records dentro de un constructor
+        PersonaConValidacionEnConstructor p1 = new PersonaConValidacionEnConstructor("Roberto", 20);
+        System.out.println(p1.descripcion()); // ✅ Roberto tiene 20 años.
+
+        Persona p2 = new Persona("Juan", -5); // ❌ Lanza error: "La edad no puede ser negativa"
+    }
+
+		
+	}
+
+

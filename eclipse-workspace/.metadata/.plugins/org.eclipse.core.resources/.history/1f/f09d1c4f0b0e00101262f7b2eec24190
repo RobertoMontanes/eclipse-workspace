@@ -1,0 +1,17 @@
+package java15;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		Object obj = "Hola, soy un String";
+
+		// Comprobamos si obj es una instancia de String
+		if (obj instanceof String) {
+			String s = (String) obj; // Hacemos el cast manualmente
+			System.out.println("Longitud del String: " + s.length());
+		}
+
+	}
+
+}

@@ -1,0 +1,36 @@
+package java14;
+
+public class Principal {
+
+	public static void main(String[] args) {
+
+		// Antes de records Java 14
+
+		PersonaSinRecords p1 = new PersonaSinRecords("Roberto", 20);
+		PersonaSinRecords p2 = new PersonaSinRecords("María", 25);
+		PersonaSinRecords p3 = new PersonaSinRecords("Roberto", 20);
+
+		System.out.println("Nombre: " + p1.getNombre());
+		System.out.println("Edad: " + p1.getEdad());
+
+		System.out.println(p2); // Imprime: PersonaSinRecords[nombre=María, edad=25]
+
+		System.out.println(p1.equals(p3)); // true
+		System.out.println();
+
+		// Java 14 con records
+
+		PersonaConRecords pc1 = new PersonaConRecords("Carlos", 30);
+		PersonaConRecords pc2 = new PersonaConRecords("Elena", 28);
+		PersonaConRecords pc3 = new PersonaConRecords("Carlos", 30);
+
+		System.out.println("Nombre: " + pc1.nombreCompleto()); // Usa el getter generado automáticamente
+		System.out.println("Edad: " + pc1.anios());
+
+		System.out.println(pc2); // Imprime: PersonaConRecords[nombreCompleto=Elena, anios=28]
+
+		System.out.println(pc1.equals(pc3)); // true
+
+	}
+
+}
